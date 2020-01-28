@@ -29,7 +29,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>PrintTest</mainClass>
+                            <mainClass>PrintMain</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
