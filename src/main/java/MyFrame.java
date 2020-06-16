@@ -39,7 +39,7 @@ public class MyFrame extends JFrame {
     }
 
     private void init(){
-        this.setSize(new Dimension(500, 300));
+        this.setSize(new Dimension(500, 500));
         this.setTitle(title);
         JMenuBar menuBar = new JMenuBar();
 
@@ -81,7 +81,7 @@ public class MyFrame extends JFrame {
         menuBar.add(menuPrint);
         this.setJMenuBar(menuBar);
 
-        this.setLayout(new GridLayout(4, 3, 10, 10));
+        this.setLayout(new GridLayout(6, 3, 10, 10));
         for (int i = 0; i < printers.size(); i++) {
             final int j = i;
             JButton button = new JButton(formatTextOfButton(printers.get(i)));

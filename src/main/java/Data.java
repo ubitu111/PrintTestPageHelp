@@ -11,11 +11,11 @@ public class Data {
 
     public Data() {
         printers = new ArrayList<String>();
-        File file = new File("person.out");
+        File file = new File("printers.out");
         if (file.exists()) {
             try {
                 ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(file));
-                printers = (ArrayList<String>) objectInputStream.readObject();
+                printers = (ArrayList) objectInputStream.readObject();
                 objectInputStream.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -32,9 +32,15 @@ public class Data {
             printers.add("HP P2050");
             printers.add("Xerox Phaser 3300");
             printers.add("Samsung M332x");
-            printers.add("");
+            printers.add("мехгбеярмн");
             printers.add("NPI175D12 (HP LaserJet 400 MFP M425dn)");
             printers.add("HP LaserJet Professional P1102");
+            printers.add("мехгбеярмн");
+            printers.add("мехгбеярмн");
+            printers.add("мехгбеярмн");
+            printers.add("мехгбеярмн");
+            printers.add("мехгбеярмн");
+            printers.add("мехгбеярмн");
         }
     }
 
@@ -44,7 +50,7 @@ public class Data {
 
     public void savePrinters(List<String> printers) {
         try {
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("person.out"));
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("printers.out"));
             objectOutputStream.writeObject(printers);
             objectOutputStream.close();
         } catch (IOException e) {
